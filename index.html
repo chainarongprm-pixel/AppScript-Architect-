@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppScript Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              google: {
+                blue: '#4285F4',
+                red: '#DB4437',
+                yellow: '#F4B400',
+                green: '#0F9D58',
+                sheet: '#1fa463',
+                script: '#4285f4'
+              }
+            }
+          },
+        },
+        plugins: [
+          function({ addUtilities }) {
+            addUtilities({
+              '.scrollbar-hide': {
+                /* IE and Edge */
+                '-ms-overflow-style': 'none',
+                /* Firefox */
+                'scrollbar-width': 'none',
+                /* Safari and Chrome */
+                '&::-webkit-scrollbar': {
+                  display: 'none'
+                }
+              }
+            })
+          }
+        ]
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "prismjs": "https://esm.sh/prismjs@1.29.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-900 text-slate-200 antialiased">
+    <div id="root"></div>
+  </body>
+</html>
